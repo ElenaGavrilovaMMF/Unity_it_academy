@@ -10,7 +10,7 @@ public class PingPong : MonoBehaviour
     public GameObject instance;
     public GameObject floor;
     public float speed = 2.0f;
-    public float distance = 2.0f;
+    public float distance;
     private float distanceReverse;
     private Vector3 startPosition;
     private Vector3 endPosition;
@@ -20,6 +20,7 @@ public class PingPong : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        distance = Random.Range(1.0f, 3.0f);
         startPosition = instance.transform.position;
         endPosition = startPosition;
         distanceReverse = distance;
