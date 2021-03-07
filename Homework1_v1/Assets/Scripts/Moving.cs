@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Windows;
+
 
 public class Moving : MonoBehaviour
 {
@@ -17,7 +17,7 @@ public class Moving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount == 1)
         { 
             var objectsCount = gameObjectList.Count;
             if (objectsCount != 0)
