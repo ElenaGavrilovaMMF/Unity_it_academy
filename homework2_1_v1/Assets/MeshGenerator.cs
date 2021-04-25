@@ -29,7 +29,7 @@ public class MeshGenerator : MonoBehaviour
         {
             GenerateFallingMesh(
                 GenerateVertices(basedMeshSize - gameObject.transform.position.x, basedMeshSize - gameObject.transform.position.z), gameObject.transform.position);
-            GenerateFallingMesh(
+           GenerateFallingMesh(
                 GenerateVertices(meshSize - (basedMeshSize - gameObject.transform.position.x), basedMeshSize - gameObject.transform.position.z),
                 new Vector3(gameObject.transform.position.x + (basedMeshSize - gameObject.transform.position.x), gameObject.transform.position.y, gameObject.transform.position.z));
             GenerateFallingMesh(
@@ -38,8 +38,6 @@ public class MeshGenerator : MonoBehaviour
             GenerateFallingMesh(
                 GenerateVertices(meshSize - (basedMeshSize - gameObject.transform.position.x), meshSize - (basedMeshSize - gameObject.transform.position.z)),
                 new Vector3(gameObject.transform.position.x + (basedMeshSize - gameObject.transform.position.x), gameObject.transform.position.y, gameObject.transform.position.z + (basedMeshSize - gameObject.transform.position.z)));
-
-            Destroy(gameObject);
         }
 
         if (gameObject.transform.position.x > centerOfBasedMesh && gameObject.transform.position.z < 0f)
@@ -56,9 +54,8 @@ public class MeshGenerator : MonoBehaviour
             GenerateFallingMesh(
                 GenerateVertices(meshSize - (basedMeshSize - gameObject.transform.position.x), meshSize - Math.Abs(gameObject.transform.position.z)), 
                 new Vector3(gameObject.transform.position.x + (basedMeshSize - gameObject.transform.position.x), gameObject.transform.position.y, -Math.Abs(gameObject.transform.position.z)));
-            
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
 
     }
     
@@ -94,6 +91,7 @@ public class MeshGenerator : MonoBehaviour
             tempCurrentMesh.transform.position = position;
             tempCurrentMesh.AddComponent<Rigidbody>();
         }
+    
 }
 
 

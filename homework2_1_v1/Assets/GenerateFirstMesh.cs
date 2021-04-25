@@ -14,6 +14,7 @@ public class GenerateFirstMesh : MonoBehaviour
     private float speed = 4f;
     private bool movingFlag = true;
     private float hideForGenarationMesh = 3f;
+    private float leftBorder = -10f;
     
     void Start()
     {
@@ -41,6 +42,11 @@ public class GenerateFirstMesh : MonoBehaviour
         if (currentGameObject != null && movingFlag)
         {
             currentGameObject.transform.position = currentGameObject.transform.position - Vector3.forward*Time.deltaTime*speed;
+        }
+
+        if (currentGameObject.transform.position.z < leftBorder)
+        {
+            Destroy(currentGameObject);
         }
         
         if (Input.GetKeyDown(KeyCode.Space))
