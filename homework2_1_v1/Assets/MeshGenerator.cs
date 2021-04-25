@@ -7,6 +7,7 @@ using System;
 [RequireComponent(typeof(MeshRenderer))]
 public class MeshGenerator : MonoBehaviour
 {
+    public Material green;
     private float meshSize = 10f;
     private float basedMeshSize = 10f;
 
@@ -89,7 +90,7 @@ public class MeshGenerator : MonoBehaviour
             tempMesh.RecalculateNormals();
             MeshCollider collider = tempCurrentMesh.AddComponent<MeshCollider>();
             collider.convex = true;
-            tempCurrentMesh.GetComponent<MeshRenderer>().material.color = Color.green;
+            tempCurrentMesh.GetComponent<MeshRenderer>().material = green;
             tempCurrentMesh.transform.position = position;
             tempCurrentMesh.AddComponent<Rigidbody>();
         }

@@ -8,6 +8,7 @@ using System;
 public class GenerateFirstMesh : MonoBehaviour
 {
     public GameObject prefabMesh;
+    public Material blue;
     
     private GameObject currentGameObject = null;
     private float speed = 4f;
@@ -18,7 +19,7 @@ public class GenerateFirstMesh : MonoBehaviour
     {
         GameObject basedMeshObject = new GameObject();
         basedMeshObject.AddComponent<MeshFilter>();
-        basedMeshObject.AddComponent<MeshRenderer>().material.color =  Color.blue;
+        basedMeshObject.AddComponent<MeshRenderer>().material = blue;
         Mesh basedMesh = new Mesh();
         basedMeshObject.GetComponent<MeshFilter>().mesh = basedMesh;
         basedMesh.vertices = GenerateVertices(10f , 10f);
