@@ -495,4 +495,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/it_academy/homework/homework2_1_v1/Build/homework2_1_v1.exe
+  playerPath: D:/it_academy/Unity_it_academy_git/homework2_1_v1/Build/homework2_1_v1.exe
