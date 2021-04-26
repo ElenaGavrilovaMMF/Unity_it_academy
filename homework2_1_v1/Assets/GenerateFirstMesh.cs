@@ -36,7 +36,7 @@ public class GenerateFirstMesh : MonoBehaviour
         {
             currentGameObject = Instantiate(prefabMesh, new Vector3(2.6f,hideForGenarationMesh,15f), Quaternion.identity);
             movingFlag = true;
-            hideForGenarationMesh += 0.7f;
+            hideForGenarationMesh += 1.7f;
         }
 
         if (currentGameObject != null && movingFlag)
